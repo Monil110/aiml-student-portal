@@ -16,9 +16,10 @@ const handler = NextAuth({
       if (!user.email.endsWith("@rvce.edu.in")) return false;
 
       try {
+        const cleanEmail = user.email.trim().toLowerCase();
         const res = await pool.query(
-          'SELECT * FROM students WHERE "College email-id" = $1',
-          [user.email]
+          'SELECT * FROM students WHERE LOWER(TRIM("College email-id")) = $1',
+          [cleanEmail]
         );
         if (res.rows.length === 0) return false;
         return true;
@@ -30,11 +31,11 @@ const handler = NextAuth({
 
     async session({ session }) {
       try {
-        const email = session?.user?.email;
+        const email = session?.user?.email?.trim().toLowerCase();
         if (!email) return session;
 
         const res = await pool.query(
-          'SELECT * FROM students WHERE "College email-id" = $1',
+          'SELECT * FROM students WHERE LOWER(TRIM("College email-id")) = $1',
           [email]
         );
 
