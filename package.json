@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "next-auth": "^4.24.13",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.18.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  }
+}
