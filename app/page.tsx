@@ -29,7 +29,7 @@ export default function LandingPage() {
 
         {/* Header / Hero Section */}
         <div className="glass-panel" style={{ textAlign: 'center', padding: '40px 20px' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, margin: '0 0 1rem 0', color: 'var(--text-primary)' }}>AIML Student <span className="text-gradient-accent">Placement Portal</span></h1>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, margin: '0 0 1rem 0', color: 'var(--text-primary)' }}>AIML Student <span className="text-gradient-accent"> Data Portal</span></h1>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
             Welcome to the platform. Please sign in to review your academic and personal details. Ensure that all the information is correct and report any discrepancies if found.
 
